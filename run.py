@@ -31,9 +31,43 @@ def time_split(hour_group):
     time_transform(split_start, split_end, monthly_total)
 
 
-monthly_total = []
-time_split(['15:00','16:00'])
-print(monthly_total)
+
+
+def loop_test():
+    list_one = ['1', '2', '3', '4', '5']
+    list_two = ['1', '2', '3', '4', '5']
+    combo_list = []
+
+    for first, second in zip(list_one, list_two):
+        math_list = first + ',' + second
+        combo_list.append(math_list)
+
+    return combo_list
+
+
+def loop_split(combo_list):
+    combo_solution = []
+    for combo in combo_list:
+        list_sep = combo.split(',')
+        start_sep = int(list_sep[0])
+        end_sep = int(list_sep[1])
+
+        calc_together = start_sep + end_sep
+
+        combo_solution.append(calc_together)
+
+    return combo_solution
+
+
+loop_test()
+loop_test_result = loop_test()
+print(loop_split(loop_test_result))
+
+# monthly_total = []
+# time_split(['15:00','16:00'])
+# print(monthly_total)
+
+
 
 
 
